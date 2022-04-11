@@ -1,7 +1,13 @@
 const express = require("express");
+const morgan = require("morgan");
 const app = express();
 
 app.use(express.json());
+app.use(morgan("tiny"), morgan(":person"));
+
+morgan.token("person", (req) => {
+  return JSON.stringify(req.body);
+});
 
 let persons = [
   {
@@ -48,7 +54,6 @@ app.get("/api/persons/:id", (request, response) => {
 });
 
 app.post("/api/persons", (request, response) => {
-  console.log(request.body);
   const body = request.body;
   const unique = persons.find((person) => person.name === body.name);
 
