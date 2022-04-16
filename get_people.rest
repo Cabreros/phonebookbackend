@@ -10,10 +10,11 @@ GET http://localhost:3001/api/persons/5
 DELETE http://localhost:3001/api/persons/2
 
 ###
-POST http://localhost:3001/api/persons/ HTTP/1.1
+POST http://localhost:3001/api/persons HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Arto Hellasss",
+    "id":123,
+    "name": "Nick Dimi",
     "number": "040-123456"
 }

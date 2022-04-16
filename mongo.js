@@ -35,20 +35,20 @@ const person = new Person({
   important: true,
 });
 
-// person.save().then((result) => {
-//   console.log(
-//     `added ${process.argv[3]} number ${process.argv[4]} to phonebook`
-//   );
-//   mongoose.connection.close();
-// });
+person.save().then((result) => {
+  console.log(
+    `added ${process.argv[3]} number ${process.argv[4]} to phonebook`
+  );
+  mongoose.connection.close();
+});
 
-if (process.argv.length === 3) {
-  Person.find({}).then((persons) => {
-    console.log("phonebook:");
-    persons.forEach((item) =>
-      console.log(item.content.name, item.content.number)
-    );
+// if (process.argv.length === 3) {
+//   Person.find({}).then((persons) => {
+//     console.log("phonebook:");
+//     persons.forEach((item) =>
+//       console.log(item.content.name, item.content.number)
+//     );
 
-    mongoose.connection.close();
-  });
-}
+//     mongoose.connection.close();
+//   });
+// }
