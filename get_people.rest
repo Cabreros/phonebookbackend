@@ -7,14 +7,14 @@ GET  http://localhost:3001/info
 GET http://localhost:3001/api/persons/5
 
 ###
-DELETE http://localhost:3001/api/persons/2
+DELETE http://localhost:3001/api/persons/625a3c8e8f18c2a8b80f4546
 
 ###
 POST http://localhost:3001/api/persons HTTP/1.1
 content-type: application/json
 
 {
-    "id":123,
     "name": "Nick Dimi",
     "number": "040-123456"
 }
+

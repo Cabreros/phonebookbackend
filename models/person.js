@@ -15,7 +15,6 @@ mongoose
 
 const personSchema = new mongoose.Schema({
   content: {
-    id: Number,
     name: String,
     number: String,
   },
