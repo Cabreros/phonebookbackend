@@ -68,7 +68,7 @@ app.delete("/api/persons/:id", (request, response) => {
     .then((result) => {
       response.status(204).end();
     })
-    .catch((error) => next(error));
+    .catch((error) => console.log(error));
 });
 
 const PORT = process.env.PORT || 3001;
