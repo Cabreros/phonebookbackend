@@ -15,7 +15,7 @@ mongoose
 
 const personSchema = new mongoose.Schema({
   content: {
-    name: String,
+    name: { type: String, minlength: 3, required: true },
     number: String,
   },
   date: Date,
